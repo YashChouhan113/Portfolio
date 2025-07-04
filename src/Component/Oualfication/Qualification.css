@@ -1,0 +1,295 @@
+.qualification-section {
+  background: linear-gradient(120deg, #1a1a2e 0%, #23234b 100%);
+  min-height: 100vh;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.qualification-title {
+  text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 4px solid white;
+    width: max-content;
+    margin: 0 auto 40px auto;
+    padding-bottom: 8px;
+  
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.qualification-card {
+  background: linear-gradient(120deg, #23234b 60%, #1a1a2e 100%);
+  border: 2.5px solid transparent;
+  border-image: linear-gradient(120deg, #DA7C25, #B923E1) 1;
+  box-shadow: 0 8px 32px #B923E133, 0 2px 12px #DA7C2533;
+  transition: transform 0.3s cubic-bezier(.25,.8,.25,1), box-shadow 0.3s, border-color 0.3s;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  color: #fff;
+  z-index: 1;
+}
+
+.qualification-card::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, #B923E1cc 0%, transparent 70%);
+  z-index: 0;
+  opacity: 0.18;
+}
+
+.qualification-card:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 12px 40px #B923E1aa, 0 2px 12px #DA7C25aa;
+  border-image: linear-gradient(120deg, #B923E1, #DA7C25) 1;
+}
+
+.qualification-card h4 {
+  color: #DA7C25;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(267deg, #DA7C25, #B923E1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  z-index: 2;
+  position: relative;
+}
+
+.qualification-card .institution {
+  font-size: 1.15rem;
+  color: #fff;
+  font-weight: 500;
+  z-index: 2;
+  position: relative;
+}
+
+.qualification-card .board {
+  font-size: 1.05rem;
+  color: #B923E1;
+  font-weight: 500;
+  z-index: 2;
+  position: relative;
+}
+
+.qualification-card .year {
+  font-size: 1rem;
+  color: #ffcf77;
+  font-style: italic;
+  z-index: 2;
+  position: relative;
+}
+
+/* Animation on load */
+.animate-card {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 991px) {
+  .qualification-card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .qualification-title {
+    font-size: 2rem;
+  }
+  .qualification-card {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .qualification-section {
+    padding: 1rem 0.2rem;
+  }
+  .qualification-title {
+    font-size: 1.5rem;
+  }
+  .qualification-card {
+    padding: 1rem 0.5rem;
+  }
+}
+
+.qualification-timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  position: relative;
+  margin-bottom: 48px;
+  z-index: 1;
+}
+
+.timeline-circle-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  min-width: 70px;
+  z-index: 2;
+}
+
+.timeline-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #DA7C25 0%, #B923E1 100%);
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 24px #B923E155, 0 2px 12px #DA7C2533;
+  border: 4px solid #23234b;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-circle:hover {
+  transform: scale(1.12) rotate(-6deg);
+  box-shadow: 0 0 32px #DA7C25cc, 0 0 32px #B923E1cc;
+}
+
+.timeline-line {
+  width: 6px;
+  height: 48px;
+  background: linear-gradient(180deg, #B923E1 0%, #DA7C25 100%);
+  margin: 0 auto;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.timeline-details {
+  background: linear-gradient(120deg, #23234b 60%, #1a1a2e 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #B923E133;
+  padding: 18px 24px;
+  margin-left: 24px;
+  min-width: 0;
+  flex: 1;
+  opacity: 0.92;
+  border: 2px solid transparent;
+  border-image: linear-gradient(120deg, #DA7C25, #B923E1) 1;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 0.8s;
+}
+
+.timeline-item:hover .timeline-details,
+.timeline-circle:hover + .timeline-details {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 8px 32px #B923E1aa, 0 2px 12px #DA7C25aa;
+  border-image: linear-gradient(120deg, #B923E1, #DA7C25) 1;
+}
+
+.timeline-details h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  background: linear-gradient(267deg, #DA7C25, #B923E1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-details .institution {
+  font-size: 1.08rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+.timeline-details .board {
+  font-size: 1rem;
+  color: #B923E1;
+  font-weight: 500;
+}
+
+.timeline-details .year {
+  font-size: 0.98rem;
+  color: #ffcf77;
+  font-style: italic;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .qualification-timeline {
+    max-width: 100%;
+    padding: 0 8px;
+  }
+  .timeline-item {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 36px;
+  }
+  .timeline-details {
+    margin-left: 0;
+    margin-top: 16px;
+    width: 100%;
+    padding: 14px 10px;
+  }
+  .timeline-circle-wrapper {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-circle {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  .timeline-details {
+    padding: 10px 4px;
+    font-size: 0.95rem;
+  }
+}

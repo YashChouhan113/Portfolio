@@ -1,0 +1,101 @@
+.skills-section {
+  padding: 2rem 0;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(120deg, #1a1a2e, #23234b, #1a1a2e);
+  background-size: 200% 200%;
+  animation: bgMove 10s ease-in-out infinite;
+}
+
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.skills-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 4px solid white;
+  width: max-content;
+  margin: 0 auto 40px auto;
+  padding-bottom: 8px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  background: linear-gradient(135deg, #23234b 60%, #B923E1 100%);
+  border-radius: 1rem;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  box-shadow: 0 2px 12px rgba(185,35,225,0.10), 0 2px 8px rgba(0,0,0,0.15);
+  cursor: pointer;
+  border: 1.5px solid #DA7C25;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px) scale(1.07);
+  background: linear-gradient(135deg, #B923E1 0%, #DA7C25 100%);
+  box-shadow: 0 6px 24px #B923E1aa, 0 0 40px #DA7C2555;
+  border: 1.5px solid #fff;
+}
+
+.skill-icon {
+  font-size: 3rem;
+  margin-bottom: 0.7rem;
+  transition: color 0.3s, transform 0.3s;
+  color: #38bdf8;
+}
+
+.skill-card:hover .skill-icon {
+  transform: scale(1.2) rotate(-8deg);
+  color: #fff;
+}
+
+/* Custom icon colors */
+.skill-icon.html { color: #e44d26; }
+.skill-icon.css { color: #1572b6; }
+.skill-icon.js { color: #f7df1e; filter: drop-shadow(0 0 2px #222); }
+.skill-icon.react { color: #61dafb; }
+.skill-icon.tailwind { color: #38bdf8; }
+.skill-icon.redux { color: #764abc; }
+.skill-icon.git { color: #f34f29; }
+.skill-icon.github { color: #fff; background: #181818; border-radius: 50%; padding: 0.2em; }
+.skill-icon.bootstrap { color: #7952b3; }
+.skill-icon.nextjs { color: #fff; background: #000; border-radius: 50%; padding: 0.2em; }
+
+.skill-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 0.3rem;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 1.5rem 0.7rem;
+    margin: 0.7rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-section {
+    padding: 1rem 0.4rem;
+    margin: 0.5rem 0;
+  }
+}

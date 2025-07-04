@@ -1,0 +1,140 @@
+.footer {
+    background-color: #0c0c2d;
+    color: #fff;
+    padding: 60px 20px 30px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 220px;
+  }
+  
+  .footer-section h3,
+  .footer-section h4 {
+    color: #c77dff;
+    margin-bottom: 16px;
+  }
+  
+  .footer-section p,
+  .footer-section li {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  
+  .footer-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 8px;
+    cursor: pointer;
+  }
+  
+  .footer-section.feedback textarea {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #c77dff;
+    border-radius: 6px;
+    padding: 10px;
+    color: #fff;
+    resize: none;
+    margin-bottom: 10px;
+  }
+  
+  .btn-feedback {
+    background: #c77dff;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .btn-feedback:hover {
+    background: #a64ff0;
+  }
+  
+  .footer-skills {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+  
+  .footer-skills h4 {
+    color: #c77dff;
+    margin-bottom: 12px;
+  }
+  
+  .skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .skills-tags span {
+    background-color: #2b2b4f;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #bbb;
+    position: relative;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 8px;
+    font-size: 18px;
+  }
+  
+  .scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #6f42c1;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 20px;
+    transition: background 0.3s;
+  }
+  
+  .scroll-top-btn:hover {
+    background: #a64ff0;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+    }
+  
+    .footer-section {
+      margin-bottom: 30px;
+    }
+  
+    .skills-tags {
+      justify-content: flex-start;
+    }
+  }
+  
