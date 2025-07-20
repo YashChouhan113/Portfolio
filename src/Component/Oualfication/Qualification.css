@@ -1,5 +1,6 @@
 .qualification-section {
-  background: linear-gradient(120deg, #1a1a2e 0%, #23234b 100%);
+  background: #111 !important;
+  color: #fff;
   min-height: 100vh;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -26,10 +27,9 @@
 }
 
 .qualification-card {
-  background: linear-gradient(120deg, #23234b 60%, #1a1a2e 100%);
-  border: 2.5px solid transparent;
-  border-image: linear-gradient(120deg, #DA7C25, #B923E1) 1;
-  box-shadow: 0 8px 32px #B923E133, 0 2px 12px #DA7C2533;
+  background: #181818 !important;
+  border: 2px solid #00e676;
+  box-shadow: 0 8px 32px #00e67633, 0 2px 12px #fff33;
   transition: transform 0.3s cubic-bezier(.25,.8,.25,1), box-shadow 0.3s, border-color 0.3s;
   position: relative;
   overflow: hidden;
@@ -52,19 +52,17 @@
 
 .qualification-card:hover {
   transform: translateY(-12px) scale(1.05);
-  box-shadow: 0 12px 40px #B923E1aa, 0 2px 12px #DA7C25aa;
-  border-image: linear-gradient(120deg, #B923E1, #DA7C25) 1;
+  box-shadow: 0 12px 40px #00e676aa, 0 2px 12px #fffaa;
+  border-image: linear-gradient(120deg, #00e676, #fff) 1;
+  border-color: #fff;
 }
 
 .qualification-card h4 {
-  color: #DA7C25;
+  background: none;
+  color: #00e676;
+  -webkit-text-fill-color: #00e676;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  background: linear-gradient(267deg, #DA7C25, #B923E1);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
   letter-spacing: 1px;
   z-index: 2;
   position: relative;
@@ -167,15 +165,15 @@
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #DA7C25 0%, #B923E1 100%);
-  color: #fff;
+  background: #111 !important;
+  color: #00e676;
   font-size: 2rem;
   font-weight: 800;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 24px #B923E155, 0 2px 12px #DA7C2533;
-  border: 4px solid #23234b;
+  box-shadow: 0 4px 24px #00e67655;
+  border: 4px solid #00e676;
   transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
   position: relative;
@@ -184,50 +182,49 @@
 
 .timeline-circle:hover {
   transform: scale(1.12) rotate(-6deg);
-  box-shadow: 0 0 32px #DA7C25cc, 0 0 32px #B923E1cc;
+  box-shadow: 0 0 32px #00e676cc;
+  border-color: #fff;
 }
 
 .timeline-line {
   width: 6px;
   height: 48px;
-  background: linear-gradient(180deg, #B923E1 0%, #DA7C25 100%);
+  background: #00e676 !important;
   margin: 0 auto;
   border-radius: 8px;
   z-index: 1;
 }
 
 .timeline-details {
-  background: linear-gradient(120deg, #23234b 60%, #1a1a2e 100%);
+  background: #181818 !important;
   border-radius: 18px;
-  box-shadow: 0 4px 24px #B923E133;
+  box-shadow: 0 4px 24px #00e67633;
   padding: 18px 24px;
   margin-left: 24px;
   min-width: 0;
   flex: 1;
   opacity: 0.92;
-  border: 2px solid transparent;
-  border-image: linear-gradient(120deg, #DA7C25, #B923E1) 1;
+  border: 2px solid #00e676;
   transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
   position: relative;
   z-index: 2;
   animation: fadeInUp 0.8s;
+  color: #fff;
 }
 
 .timeline-item:hover .timeline-details,
 .timeline-circle:hover + .timeline-details {
   transform: translateY(-8px) scale(1.04);
-  box-shadow: 0 8px 32px #B923E1aa, 0 2px 12px #DA7C25aa;
-  border-image: linear-gradient(120deg, #B923E1, #DA7C25) 1;
+  box-shadow: 0 8px 32px #00e676aa;
+  border-color: #fff;
 }
 
 .timeline-details h4 {
   font-size: 1.2rem;
   font-weight: 700;
-  background: linear-gradient(267deg, #DA7C25, #B923E1);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
+  background: none;
+  color: #00e676;
+  -webkit-text-fill-color: #00e676;
   margin-bottom: 0.5rem;
 }
 
@@ -239,13 +236,13 @@
 
 .timeline-details .board {
   font-size: 1rem;
-  color: #B923E1;
+  color: #00e676;
   font-weight: 500;
 }
 
 .timeline-details .year {
   font-size: 0.98rem;
-  color: #ffcf77;
+  color: #fff;
   font-style: italic;
 }
 

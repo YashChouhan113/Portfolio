@@ -4,8 +4,8 @@
     align-items: center;
     text-align: center;
     padding: 60px 20px;
-    color: white;
-    background: linear-gradient(120deg, #1a1a2e, #23234b, #1a1a2e);
+    color: #fff;
+    background: #111 !important;
     background-size: 200% 200%;
     animation: bgMove 10s ease-in-out infinite;
   }
@@ -68,10 +68,10 @@
   .animated-text {
     font-size: 20px;
     margin-bottom: 10px;
-    color: #ccc;
+    color: #fff;
     overflow: hidden;
     white-space: nowrap;
-    border-right: 2px solid #DA7C25;
+    border-right: 2px solid #00e676;
     animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
   }
   
@@ -86,7 +86,7 @@
   
   /* Name highlight with animated gradient */
   .highlight-name {
-    background: linear-gradient(267deg, #DA7C25, #B923E1, #DA7C25);
+    background: linear-gradient(267deg, #00e676, #fff, #00e676);
     background-size: 200% 200%;
     animation: gradientMove 3s linear infinite;
     -webkit-background-clip: text;
@@ -104,13 +104,13 @@
     font-size: 36px;
     margin: 10px 0;
     letter-spacing: 1px;
-    text-shadow: 0 2px 8px #B923E1;
+    text-shadow: 0 2px 8px #00e676;
   }
   
   .hero h3.animated-role {
     font-size: 22px;
     margin: 8px 0;
-    color: #ffcf77;
+    color: #00e676;
     animation: fadeInUp 1.5s;
   }
   
@@ -159,22 +159,32 @@
   }
   
   .hero-connect {
-    background: linear-gradient(267deg, #DA7C25, #B923E1);
-    color: white;
+    background: #00e676;
+    color: #111;
     border: none;
     box-shadow: 0 2px 10px #B923E133;
   }
   
   .hero-resume {
     background: transparent;
-    border: 2px solid #DA7C25;
-    color: #DA7C25;
+    border: 2px solid #00e676;
+    color: #00e676;
   }
   
   .hero-connect:hover,
   .hero-resume:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px #DA7C25, 0 0 40px #B923E1;
+  }
+  
+  .hero-connect:hover {
+    background: #fff;
+    color: #00e676;
+  }
+  
+  .hero-resume:hover {
+    background: #00e676;
+    color: #111;
   }
   
   /* Social Icons */
@@ -186,14 +196,15 @@
   }
   
   .hero-socials a {
-    color: #B923E1;
-    transition: 0.3s;
+    color: #fff;
+    font-size: 2rem;
+    margin: 0 10px;
+    transition: color 0.3s, filter 0.3s;
+    display: inline-block;
   }
-  
-  .hero-socials a:hover {
-    color: #DA7C25;
-    transform: scale(1.2) rotate(-10deg);
-    text-shadow: 0 0 10px #B923E1;
+  .hero-socials a:hover, .hero-socials a:focus {
+    color: #00e676;
+    filter: drop-shadow(0 0 8px #00e676);
   }
   
   /* Responsive Design */

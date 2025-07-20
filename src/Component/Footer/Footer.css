@@ -1,5 +1,5 @@
 .footer {
-    background-color: #0c0c2d;
+    background-color: #111;
     color: #fff;
     padding: 60px 20px 30px;
     font-family: 'Segoe UI', sans-serif;
@@ -20,7 +20,7 @@
   
   .footer-section h3,
   .footer-section h4 {
-    color: #c77dff;
+    color: #00e676;
     margin-bottom: 16px;
   }
   
@@ -43,7 +43,7 @@
   .footer-section.feedback textarea {
     width: 100%;
     background: transparent;
-    border: 1px solid #c77dff;
+    border: 1px solid #00e676;
     border-radius: 6px;
     padding: 10px;
     color: #fff;
@@ -52,10 +52,10 @@
   }
   
   .btn-feedback {
-    background: #c77dff;
+    background: #00e676;
     border: none;
     padding: 10px 20px;
-    color: #fff;
+    color: #111;
     border-radius: 6px;
     font-weight: bold;
     cursor: pointer;
@@ -63,7 +63,7 @@
   }
   
   .btn-feedback:hover {
-    background: #a64ff0;
+    background: #00c96b;
   }
   
   .footer-skills {
@@ -73,7 +73,7 @@
   }
   
   .footer-skills h4 {
-    color: #c77dff;
+    color: #00e676;
     margin-bottom: 12px;
   }
   
@@ -84,14 +84,14 @@
   }
   
   .skills-tags span {
-    background-color: #2b2b4f;
+    background-color: #23234b;
     padding: 6px 14px;
     border-radius: 20px;
     font-size: 14px;
   }
   
   .footer-bottom {
-    border-top: 1px solid #333;
+    border-top: 1px solid #222;
     padding-top: 20px;
     text-align: center;
     font-size: 14px;
@@ -105,22 +105,35 @@
     gap: 18px;
     margin-bottom: 8px;
     font-size: 18px;
+    color: #00e676;
   }
   
   .scroll-top-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #00e676;
+    color: #181818;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 20px #00e67688;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #6f42c1;
-    color: #fff;
-    padding: 10px 14px;
-    border-radius: 8px;
-    font-size: 20px;
-    transition: background 0.3s;
+    right: 30px;
+    bottom: 30px;
+    z-index: 2000;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    text-decoration: none;
   }
-  
-  .scroll-top-btn:hover {
-    background: #a64ff0;
+  .scroll-top-btn:hover, .scroll-top-btn:focus {
+    background: #fff;
+    color: #00e676;
+    box-shadow: 0 0 32px #00e676cc;
+    transform: scale(1.1);
   }
   
   /* Responsive */

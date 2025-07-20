@@ -2,7 +2,7 @@
   padding: 2rem 0;
   color: #fff;
   text-align: center;
-  background: linear-gradient(120deg, #1a1a2e, #23234b, #1a1a2e);
+  background: #111 !important;
   background-size: 200% 200%;
   animation: bgMove 10s ease-in-out infinite;
 }
@@ -36,35 +36,39 @@
 }
 
 .skill-card {
-  background: linear-gradient(135deg, #23234b 60%, #B923E1 100%);
+  background: #181818 !important;
   border-radius: 1rem;
   padding: 1.5rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-  box-shadow: 0 2px 12px rgba(185,35,225,0.10), 0 2px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 12px #00e67622, 0 2px 8px #000c;
   cursor: pointer;
-  border: 1.5px solid #DA7C25;
+  border: 2px solid #00e676;
+  color: #fff;
 }
 
 .skill-card:hover {
   transform: translateY(-8px) scale(1.07);
-  background: linear-gradient(135deg, #B923E1 0%, #DA7C25 100%);
-  box-shadow: 0 6px 24px #B923E1aa, 0 0 40px #DA7C2555;
-  border: 1.5px solid #fff;
+  background: #181818;
+  color: #fff;
+  box-shadow: 0 6px 24px #00e676aa, 0 0 40px #00e67655;
+  border: 2px solid #00e676;
+  text-shadow: 0 0 8px #00e67688;
 }
 
 .skill-icon {
   font-size: 3rem;
   margin-bottom: 0.7rem;
   transition: color 0.3s, transform 0.3s;
-  color: #38bdf8;
+  color: #00e676;
 }
 
 .skill-card:hover .skill-icon {
   transform: scale(1.2) rotate(-8deg);
-  color: #fff;
+  color: #00e676;
+  filter: drop-shadow(0 0 8px #00e676);
 }
 
 /* Custom icon colors */

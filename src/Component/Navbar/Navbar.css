@@ -8,10 +8,10 @@
 body {
   height: 100vh;
   padding-top: 80px; /* to avoid overlap with fixed navbar */
-  background: linear-gradient(120deg, #1a1a2e, #23234b, #1a1a2e);
+  background: #111 !important;
   background-size: 200% 200%;
   animation: bgMove 10s ease-in-out infinite;
-  color: white;
+  color: #fff;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -27,23 +27,23 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 20px 120px;
-  background: linear-gradient(120deg, #1a1a2e, #23234b, #1a1a2e);
+  background: #111 !important;
   background-size: 200% 200%;
   animation: bgMove 10s ease-in-out infinite;
-  box-shadow: 0 2px 10px #B923E133;
+  box-shadow: 0 2px 10px #00e67633;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid #222;
   backdrop-filter: blur(10px);
 }
 
 .nav-logo {
   font-size: 28px;
   font-weight: 800;
-  background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
+  background: linear-gradient(267deg, #00e676 0.36%, #fff 102.06%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: 1px;
@@ -56,6 +56,7 @@ body {
   list-style: none;
   gap: 40px;
   font-size: 20px;
+  background-color: #111 !important;
 }
 
 .nav-menu li {
@@ -76,7 +77,7 @@ body {
   display: block;
   height: 3px;
   width: 0;
-  background: linear-gradient(267deg, #DA7C25, #B923E1);
+  background: linear-gradient(267deg, #00e676, #fff);
   border-radius: 2px;
   transition: width 0.3s;
   position: absolute;
@@ -85,7 +86,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #DA7C25;
+  color: #00e676;
 }
 
 .nav-link:hover::after {
@@ -93,21 +94,25 @@ body {
 }
 
 .nav-link.active {
-  color: #B923E1;
+  color: #00e676;
 }
 
 /* Connect Button */
 .nav-connect {
   padding: 12px 24px;
   border-radius: 50px;
-  background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
+  background: linear-gradient(267deg, #00e676 0.36%, #fff 102.06%);
   font-size: 18px;
   cursor: pointer;
   transition: 0.5s;
+  color: #111;
+  font-weight: bold;
 }
 
 .nav-connect:hover {
   transform: scale(1.05);
+  background: linear-gradient(267deg, #fff 0.36%, #00e676 102.06%);
+  color: #00e676;
 }
 
 /* Hamburger Menu Icon */
@@ -122,7 +127,7 @@ body {
 .nav-menu-icon .bar {
   width: 25px;
   height: 3px;
-  background: linear-gradient(90deg, #B923E1 0%, #DA7C25 100%);
+  background: linear-gradient(90deg, #00e676 0%, #fff 100%);
   border-radius: 2px;
 }
 
@@ -133,7 +138,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.85) !important;
   z-index: 999;
 }
 
@@ -144,20 +149,23 @@ body {
   right: 30px;
   width: 40px;
   height: 40px;
-  background: linear-gradient(267deg, #DA7C25, #B923E1);
-  color: white;
+  background: #00e676;
+  color: #111;
   font-size: 24px;
   text-align: center;
   line-height: 40px;
   border-radius: 50%;
   cursor: pointer;
   z-index: 1500;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 20px #00e67688;
+  transition: transform 0.3s, background 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
 .scroll-to-top:hover {
   transform: scale(1.1);
+  background: #fff;
+  color: #00e676;
+  box-shadow: 0 0 32px #00e676cc;
 }
 
 /* Responsive Layout */

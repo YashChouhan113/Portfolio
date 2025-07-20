@@ -18,7 +18,7 @@ const qualifications = [
   },
   {
     step: 3,
-    title: "Graduation (B.E.)",
+    title: "Graduation (Bachelor Of Technology)",
     institution: "Chameli Devi Group of Institutes",
     board: "RGPV University",
     year: "2025",

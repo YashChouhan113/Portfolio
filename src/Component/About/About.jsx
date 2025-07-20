@@ -13,7 +13,7 @@ function About() {
       <div className="row about-row align-items-center g-4 d-flex flex-row">
         <div className="col-lg-6 col-md-6 text-center">
           <img
-            src="/Images/dev-2.png"
+            src="/Images/yccc.jpg"
             alt="Yash"
             className="img-fluid about-img shadow "
           />

@@ -1,10 +1,11 @@
 /* About Section Main Container */
 .about-container {
-  background: linear-gradient(120deg, #1a1a2e, #23234b, #1a1a2e);
+  background: #111 !important;
+  color: #fff;
   background-size: 200% 200%;
   animation: bgMove 10s ease-in-out infinite;
   border-radius: 32px;
-  box-shadow: 0 8px 32px #B923E133;
+  box-shadow: 0 8px 32px #00e67633;
   padding: 40px 24px;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -19,20 +20,21 @@
 /* About Image Styling */
 .about-img {
   border-radius: 24px;
-  border: 4px solid;
-  border-image: linear-gradient(120deg, #DA7C25, #B923E1) 1;
-  box-shadow: 0 8px 32px 0 #B923E155, 0 4px 32px #DA7C2533;
+  border: 4px solid #00e676;
+  box-shadow: 0 8px 32px 0 #00e67655, 0 4px 32px #00e67633;
   background: rgba(34, 32, 52, 0.35);
   backdrop-filter: blur(8px);
   max-width: 280px;
   max-height: 480px;
   object-fit: cover;
-  transition: transform 0.4s cubic-bezier(.4,2,.6,1), box-shadow 0.4s;
+  transition: transform 0.4s cubic-bezier(.4,2,.6,1), box-shadow 0.4s, border-color 0.3s;
   margin-right: 40px;
 }
 
 .about-img:hover {
   transform: scale(1.05) rotate(-2deg);
+  border-color: #fff;
+  box-shadow: 0 12px 40px #00e676aa;
 }
 
 /* About Cards Wrapper for Flex Layout */
@@ -53,37 +55,40 @@
 
 /* About Card: Remove pitch black, use theme color */
 .about-card {
-  background: rgba(34, 32, 52, 0.95); /* theme-matching, not black */
+  background: #181818 !important;
   border-radius: 20px;
-  box-shadow: 0 4px 24px #B923E133;
+  box-shadow: 0 4px 24px #00e67633;
   padding: 28px 20px 24px 20px;
   display: flex;
   align-items: flex-start;
   gap: 18px;
   transition: transform 0.3s, box-shadow 0.3s;
-  border: 1.5px solid rgba(218, 124, 37, 0.13);
+  border: 2px solid #00e676;
   position: relative;
   overflow: hidden;
-  background-image: linear-gradient(120deg, #23234b 60%, #1a1a2e 100%);
+  background-image: linear-gradient(120deg, #23234b 60%, #111 100%);
+  color: #fff;
 }
 
 .about-card:hover {
   transform: translateY(-8px) scale(1.03);
-  border-color: #DA7C25;
+  border-color: #fff;
+  box-shadow: 0 8px 32px #00e67677;
 }
 
 /* Icon Styling */
 .about-icon {
   font-size: 2.6rem;
   color: #fff;
-  background: linear-gradient(120deg, #B923E1cc, #DA7C25cc);
+  background: #00e676;
   border-radius: 50%;
   padding: 14px;
   margin-right: 8px;
-  box-shadow: 0 4px 24px #B923E155, 0 2px 12px #DA7C2533;
+  box-shadow: 0 4px 24px #00e67655, 0 2px 12px #fff33;
   border: 2.5px solid rgba(255,255,255,0.18);
   backdrop-filter: blur(6px);
   transition: color 0.3s, box-shadow 0.3s, background 0.3s;
+  color: #111;
 }
 
 
@@ -91,11 +96,11 @@
 .about-card h2 {
   font-size: 1.4rem;
   margin-bottom: 8px;
-  background: linear-gradient(267deg, #DA7C25, #B923E1);
+  background: none;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: #00e676;
   font-weight: 700;
   letter-spacing: 0.5px;
 }
@@ -108,7 +113,7 @@
 }
 
 .about-card strong {
-  color: #DA7C25;
+  color: #00e676;
   font-weight: 600;
 }
 

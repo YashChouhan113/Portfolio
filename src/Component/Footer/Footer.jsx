@@ -12,6 +12,10 @@ function Footer() {
     }
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const onSubmit = async (event) => {
     event.preventDefault();
 
@@ -107,9 +111,9 @@ function Footer() {
           <i className="bi bi-instagram"></i>
         </div>
         <p>© 2025 Yash Chouhan. All rights reserved.</p>
-        <p>Thanks for visiting my portfolio 💜</p>
-        <a href="#" className="scroll-top-btn">
-          <i className="bi bi-arrow-up"></i>
+        <p>Thanks for visiting my portfolio 💚</p>
+        <a href="#" className="scroll-top-btn" onClick={scrollToTop} aria-label="Scroll to top">
+          ↑
         </a>
       </div>
     </footer>

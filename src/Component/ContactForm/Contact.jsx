@@ -47,7 +47,7 @@ function Contact() {
               {/* Left: Form */}
               <div className="form-left flex-fill pe-lg-4 mb-4 mb-lg-0">
                 {alertMessage && (
-                  <div className={`alert alert-${alertType} mb-3`} role="alert">
+                  <div className={`contact-toast alert-${alertType}`} role="alert" style={{borderLeftColor: alertType === 'success' ? '#00e676' : '#fff'}}>
                     {alertMessage}
                   </div>
                 )}

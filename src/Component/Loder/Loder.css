@@ -4,10 +4,7 @@
   left: 0;
   height: 100vh;
   width: 100vw;
-  /* background: #161513; */
-  background: linear-gradient(120deg, #161513, #23234b, #161513);
-  background-size: 200% 200%;
-  animation: bgMove 10s ease-in-out infinite;
+  background: #181818;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,11 +47,12 @@
 .spinner {
   width: 60px;
   height: 60px;
-  border: 6px solid rgba(255, 255, 255, 0.2);
-  border-top-color: #DA7C25;
+  border: 6px solid #222;
+  border-top-color: #00e676;
   border-radius: 50%;
   animation: spin 1s linear infinite;
   margin-bottom: 20px;
+  box-shadow: 0 0 24px #00e67655;
 }
 
 @keyframes spin {
@@ -64,10 +62,19 @@
 }
 
 .loader-text {
-  color: #DA7C25;
-  font-size: 22px;
+  color: #00e676;
+  font-size: 24px;
   letter-spacing: 2px;
   font-weight: bold;
   text-shadow: 0 2px 8px #000a;
   margin-top: 10px;
+  text-align: center;
+}
+
+.mobile-loader-icon svg rect[stroke] {
+  stroke: #00e676 !important;
+}
+
+.mobile-loader-dot {
+  fill: #00e676 !important;
 }
