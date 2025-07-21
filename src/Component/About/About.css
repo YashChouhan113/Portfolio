@@ -183,9 +183,11 @@
     margin-bottom: 16px;
   }
   .about-img {
-    max-width: 100px;
-    max-height: 110px;
+    width: 200px;
+    max-width: 200px;
+    max-height: 180px;
     margin-bottom: 8px;
+    object-position: top;
   }
   .about-cards-wrapper {
     gap: 10px;

@@ -8,6 +8,7 @@ import Project from './Component/Project/Project';
 import Qualification from './Component/Oualfication/Qualification';
 import Contact from './Component/ContactForm/Contact';
 import Footer from './Component/Footer/Footer';
+import Container from './Component/Container';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -24,12 +25,14 @@ function App() {
       ) : (
         <>
           <Navbar/>
-          <Hero/>
-          <About/>
-          <Skill/>
-          <Project/>
-          <Qualification/>
-          <Contact/>
+          <Container>
+            <Hero/>
+            <About/>
+            <Skill/>
+            <Project/>
+            <Qualification/>
+            <Contact/>
+          </Container>
           <Footer/>
         </>
       )}

@@ -1,0 +1,19 @@
+.container-responsive {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .container-responsive {
+    padding: 32px;
+  }
+}
+
+@media (min-width: 900px) {
+  .container-responsive {
+    padding: 48px;
+  }
+} 
