@@ -15,7 +15,7 @@ const projects = [
       'Developed modules for Admission, Class, Attendance, Live Class, Purchasing, and more.',
       'Implemented advanced features for both student and admin management.'
     ],
-    link: '#',
+    link: 'https://letskillify.com/',
   },
   {
     title: 'Investobazzar',
@@ -26,7 +26,7 @@ const projects = [
       'Integrated Razorpay payment gateway for secure transactions.',
       'Developed dynamic forms and integrated Aadhaar API for verification.'
     ],
-    link: '#',
+    link: 'https://www.investobazar.com/',
   },
   {
     title: 'NGO Website',
@@ -36,7 +36,7 @@ const projects = [
     details: [
       "Designed and developed a static website to showcase the NGO's work and mission."
     ],
-    link: '#',
+    link: 'https://webnextpro.com/tf/charitia/index.html',
   },
   {
     title: 'Why Not Fly',
@@ -46,7 +46,7 @@ const projects = [
     details: [
       'Created a travel website with a modern user interface and interactive features.'
     ],
-    link: '#',
+    link: 'https://whynotfly.in/',
   },
 ];
 
