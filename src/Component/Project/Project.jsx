@@ -53,19 +53,35 @@ const projects = [
 const sliderSettings = {
   dots: true,
   infinite: true,
-  speed: 600,
+  speed: 800,
   slidesToShow: 3,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 3500,
+  autoplaySpeed: 4000,
+  pauseOnHover: true,
+  cssEase: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)',
   responsive: [
     {
+      breakpoint: 1400,
+      settings: { 
+        slidesToShow: 3,
+        slidesToScroll: 1
+      },
+    },
+    {
       breakpoint: 1200,
-      settings: { slidesToShow: 2 },
+      settings: { 
+        slidesToShow: 2,
+        slidesToScroll: 1
+      },
     },
     {
       breakpoint: 768,
-      settings: { slidesToShow: 1 },
+      settings: { 
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true
+      },
     },
   ],
 };

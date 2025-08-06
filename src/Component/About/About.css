@@ -121,6 +121,10 @@
 @media (max-width: 992px) {
   .about-container {
     padding: 24px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .about-img {
     max-width: 200px;
@@ -132,10 +136,13 @@
     flex-direction: column !important;
     align-items: center;
     gap: 18px;
+    width: 100%;
   }
   .about-cards-wrapper {
     margin-top: 18px;
     gap: 18px;
+    width: 100%;
+    max-width: 500px;
   }
   .about-card {
     padding: 18px 10px 16px 10px;
@@ -148,6 +155,10 @@
     margin-bottom: 24px;
     border-radius: 18px;
     padding: 20px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .about-img {
     max-width: 140px;
@@ -156,22 +167,35 @@
   }
   .row.align-items-center.g-4 {
     flex-direction: column !important;
+    align-items: center;
   }
   .about-cards-wrapper {
     width: 100%;
     margin-top: 18px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .about-card {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
     gap: 10px;
     padding: 12px 6px 10px 6px;
+    width: 100%;
   }
   .about-card h2 {
     font-size: 1.1rem;
+    text-align: center;
   }
   .about-card p {
     font-size: 0.95rem;
+    text-align: center;
+  }
+  .about-heading {
+    text-align: center;
+    margin-bottom: 16px;
   }
 }
 
@@ -181,6 +205,10 @@
     border-radius: 10px;
     margin-top: 16px;
     margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .about-img {
     width: 200px;
@@ -191,9 +219,15 @@
   }
   .about-cards-wrapper {
     gap: 10px;
+    max-width: 350px;
   }
   .about-card {
     padding: 6px 2px 6px 2px;
+    text-align: center;
+  }
+  .about-heading {
+    text-align: center;
+    margin-bottom: 12px;
   }
 }
 

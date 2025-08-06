@@ -5,6 +5,7 @@
   background: linear-gradient(120deg, #111 60%, #23234b 100%);
   background-size: 200% 200%;
   animation: bgMove 10s ease-in-out infinite;
+  perspective: 1000px;
 }
 
 @keyframes bgMove {
@@ -38,10 +39,14 @@
 .project-card-link {
   text-decoration: none;
   color: inherit;
+  display: block;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .project-slider {
   margin-top: 2rem;
+  perspective: 1200px;
 }
 
 .project-card {
@@ -49,14 +54,17 @@
   max-height: 440px;
   height: 440px;
   width: 350px;
-  background: #181818 !important;
+  background: linear-gradient(145deg, #1a1a1a, #2a2a2a) !important;
   border-radius: 22px;
-  box-shadow: 0 8px 32px 0 rgba(0, 255, 128, 0.12), 0 2px 16px 0 rgba(0,0,0,0.25);
+  box-shadow: 
+    0 20px 60px rgba(0, 230, 118, 0.3),
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
   overflow: hidden;
-  transition: transform 0.25s, box-shadow 0.25s, border 0.25s;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   padding-bottom: 1.2rem;
-  border: 2.5px solid #222;
-  backdrop-filter: blur(8px);
+  border: 3px solid #00e676;
+  backdrop-filter: blur(12px);
   position: relative;
   color: #fff;
   display: flex;
@@ -64,12 +72,35 @@
   align-items: flex-start;
   scroll-snap-align: start;
   animation: fadeInCard 0.8s cubic-bezier(.4,2,.6,1);
+  transform-style: preserve-3d;
+  transform: rotateY(0deg) rotateX(0deg);
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent, rgba(0, 230, 118, 0.1), transparent);
+  border-radius: 22px;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
 }
 
 .project-card:hover {
-  transform: translateY(-12px) scale(1.04);
-  box-shadow: 0 16px 48px 0 #00e67655, 0 0 40px #fff2;
-  border: 2.5px solid #00e676;
+  transform: translateY(-20px) rotateY(15deg) rotateX(5deg) scale(1.05);
+  box-shadow: 
+    0 30px 80px rgba(0, 230, 118, 0.4),
+    0 15px 50px rgba(0, 0, 0, 0.5),
+    0 0 60px rgba(0, 230, 118, 0.2);
+  border: 3px solid #00e676;
+}
+
+.project-card:hover::before {
+  opacity: 1;
 }
 
 .project-card .project-img {
@@ -80,7 +111,12 @@
   border-top-right-radius: 22px;
   margin-bottom: 1rem;
   background: #111;
-  box-shadow: 0 2px 12px #00e67633;
+  box-shadow: 0 4px 20px rgba(0, 230, 118, 0.3);
+  transition: transform 0.6s ease;
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.1) translateZ(20px);
 }
 
 .project-card h3 {
@@ -88,6 +124,13 @@
   margin: 0 0.7rem 0.2rem 0.7rem;
   color: #fff;
   letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  transition: transform 0.6s ease;
+}
+
+.project-card:hover h3 {
+  transform: translateZ(15px);
+  color: #00e676;
 }
 
 .project-card p,
@@ -95,6 +138,12 @@
   margin: 0 0.7rem 0.2rem 0.7rem;
   color: #e0e0e0;
   font-size: 0.85rem;
+  transition: transform 0.6s ease;
+}
+
+.project-card:hover p,
+.project-card:hover ul {
+  transform: translateZ(10px);
 }
 
 .project-card ul {
@@ -106,15 +155,70 @@
   margin-top: 0.2rem;
   color: #bdbdbd;
   font-size: 0.8rem;
+  transition: transform 0.6s ease;
+}
+
+.project-card:hover .project-desc-en {
+  transform: translateZ(5px);
 }
 
 @keyframes fadeInCard {
-  from { opacity: 0; transform: translateY(40px) scale(0.95); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
+  from { 
+    opacity: 0; 
+    transform: translateY(40px) scale(0.95) rotateY(-20deg); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0) scale(1) rotateY(0deg); 
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotateY(0deg); }
+  50% { transform: translateY(-10px) rotateY(5deg); }
 }
 
 .project-animate {
   animation: fadeInCard 0.8s cubic-bezier(.4,2,.6,1);
+}
+
+.project-card {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* 3D Slider Navigation */
+.slick-dots {
+  bottom: -40px !important;
+}
+
+.slick-dots li button:before {
+  color: #00e676 !important;
+  font-size: 12px !important;
+  opacity: 0.5;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #00e676 !important;
+  opacity: 1;
+}
+
+.slick-arrow {
+  display: none !important;
+}
+
+/* 3D Card Stack Effect */
+.slick-slide {
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.slick-slide:not(.slick-active) {
+  transform: scale(0.8) rotateY(20deg);
+  opacity: 0.6;
+}
+
+.slick-slide.slick-active {
+  transform: scale(1) rotateY(0deg);
+  opacity: 1;
 }
 
 @media (max-width: 900px) {
@@ -151,11 +255,28 @@
   .project-title {
     font-size: 2rem;
   }
+  /* Center all text in project cards for mobile */
+  .project-card {
+    align-items: center;
+    text-align: center;
+  }
+  /* Hide slick slider arrows on mobile */
+  .slick-arrow {
+    display: none !important;
+  }
 }
 
 @media (max-width: 480px) {
   .project-section {
     padding: 1rem 0.4rem;
     margin: 0.5rem 0;
+  }
+  /* Extra assurance for smallest screens */
+  .project-card {
+    align-items: center;
+    text-align: center;
+  }
+  .slick-arrow {
+    display: none !important;
   }
 }

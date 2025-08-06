@@ -261,32 +261,63 @@
 @media (max-width: 767px) {
   .qualification-timeline {
     max-width: 100%;
-    padding: 0 8px;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .timeline-item {
     flex-direction: column;
     align-items: center;
     margin-bottom: 36px;
+    width: 100%;
+    max-width: 400px;
   }
   .timeline-details {
     margin-left: 0;
     margin-top: 16px;
     width: 100%;
-    padding: 14px 10px;
+    padding: 16px 12px;
+    text-align: center;
   }
   .timeline-circle-wrapper {
     min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .qualification-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px 8px;
+  }
+  .qualification-title {
+    text-align: center;
+    margin: 0 auto 30px auto;
   }
 }
 
 @media (max-width: 480px) {
   .timeline-circle {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
+    width: 44px;
+    height: 44px;
+    font-size: 1.3rem;
   }
   .timeline-details {
-    padding: 10px 4px;
+    padding: 12px 8px;
     font-size: 0.95rem;
+  }
+  .qualification-section {
+    padding: 16px 4px;
+  }
+  .qualification-title {
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+  }
+  .timeline-item {
+    max-width: 350px;
   }
 }

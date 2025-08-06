@@ -112,7 +112,7 @@ body {
 .nav-connect:hover {
   transform: scale(1.05);
   background: linear-gradient(267deg, #fff 0.36%, #00e676 102.06%);
-  color: #00e676;
+  color:#111;
 }
 
 /* Hamburger Menu Icon */

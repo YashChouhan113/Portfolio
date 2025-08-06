@@ -99,8 +99,8 @@
   .btn-contact:hover {
     transform: scale(1.04);
     box-shadow: 0 4px 24px #00e67688;
-    background: linear-gradient(267deg, #fff, #00e676);
-    color: #00e676;
+    background: #00e676;
+    color: #111;
   }
   
   /* ===== Right Side: Info Content ===== */
